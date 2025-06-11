@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +10,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        NavBarComponent
       ],
     }).compileComponents();
   }));
@@ -26,10 +28,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('LopDim');
   });
 
-  it('should render title', () => {
+  it('should render navbar title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('LopDim app is running!');
+    const compiled = fixture.nativeElement as HTMLElement;
+    const navText = compiled.querySelector('app-nav-bar .center-text')?.textContent;
+    expect(navText).toContain('Uniformes LopDim');
   });
 });
