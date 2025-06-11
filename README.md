@@ -1,6 +1,6 @@
 # LopDim
 
-This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8 and updated to Angular 17.
+This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8 and updated to Angular 18.
 
 ## Development server
 

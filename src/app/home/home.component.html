@@ -1,3 +1,8 @@
 <div class="center">
   <img [src]="'/assets/LopDimBan.png'">
 </div>
+<div class="counter">
+  <p>Count: {{ counter() }}</p>
+  <p>Double: {{ doubleCounter() }}</p>
+  <button mat-raised-button color="primary" (click)="increment()">Increment</button>
+</div>
